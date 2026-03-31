@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Cox's Bazar",
+    "image": "https://images.unsplash.com/photo-1589308078054-832cdac2e84f",
+    "description": "Cox's Bazar is the longest natural sea beach in the world, stretching over 120 kilometers along the Bay of Bengal. It is famous for its golden sandy shoreline, breathtaking sunsets, and peaceful sea waves. Visitors can enjoy activities like beach walking, swimming, surfing, and exploring nearby attractions such as Himchari and Inani Beach. It is one of the most popular tourist destinations in Bangladesh."
+  },
+  {
+    "id": 2,
+    "name": "Sreemangal",
+    "image": "https://images.unsplash.com/photo-1597758684510-3c2f7d3c2c02",
+    "description": "Sreemangal is known as the tea capital of Bangladesh, filled with endless green tea gardens and rolling hills. The calm and fresh environment makes it a perfect place for nature lovers. Visitors can explore Lawachara National Park, taste the famous seven-layer tea, and enjoy bird watching. The peaceful atmosphere and natural beauty make it an ideal getaway from busy city life."
+  },
+  {
+    "id": 3,
+    "name": "Sundarbans",
+    "image": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3",
+    "description": "The Sundarbans is the largest mangrove forest in the world and a UNESCO World Heritage Site. It is home to the majestic Royal Bengal Tiger, as well as many species of birds, reptiles, and aquatic animals. The forest is crisscrossed by rivers and canals, offering a unique ecosystem. Visitors can explore the area by boat, experience wildlife, and enjoy the mysterious beauty of nature."
+  },
+  {
+    "id": 4,
+    "name": "Bandarban",
+    "image": "https://images.unsplash.com/photo-1602471615287-d733c59b79c0",
+    "description": "Bandarban is one of the most beautiful hill districts in Bangladesh, known for its stunning পাহাড়, waterfalls, and tribal culture. It offers breathtaking views, adventurous trekking opportunities, and peaceful natural surroundings. Popular spots include Nilgiri, Nilachal, and Boga Lake. It is a perfect destination for those who love mountains and adventure."
+  },
+  {
+    "id": 5,
+    "name": "Saint Martin",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "description": "Saint Martin is the only coral island in Bangladesh, located in the Bay of Bengal. It is famous for its crystal-clear blue water, coral reefs, and fresh seafood. The island offers a calm and relaxing environment, especially during sunrise and sunset. Visitors can enjoy beach activities, snorkeling, and exploring nearby Chera Dwip."
+  },
+  {
+    "id": 6,
+    "name": "Rangamati",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+    "description": "Rangamati is a beautiful hill district known for its scenic landscape and Kaptai Lake, the largest man-made lake in Bangladesh. Surrounded by green hills and water, it offers a peaceful and refreshing environment. Visitors can enjoy boat rides, explore tribal culture, and visit places like Hanging Bridge and Shuvolong Waterfall."
+  }
+]
