@@ -11,13 +11,16 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
-        setSelectedId(data[0].id);
+        setSelectedId(data[0]?.id);
       });
   }, []);
 
   const selectedCategory = categories.find(
     (item) => item.id === selectedId
   );
+
+  console.log("selectedId:", selectedId);
+  console.log("selectedCategory:", selectedCategory);
 
   return (
     <div className="w-10/12 mx-auto py-10">

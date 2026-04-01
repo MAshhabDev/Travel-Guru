@@ -14,7 +14,7 @@ const HomeLayout = () => {
             <div className="relative z-10 mx-auto">
 
                 <header className='py-3 w-10/12 mx-auto' >
-                    <Navbar ></Navbar>
+                    <Navbar textColor='text-white'></Navbar>
 
 
                 </header>

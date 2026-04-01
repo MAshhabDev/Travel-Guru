@@ -2,17 +2,17 @@ import React from 'react';
 import Loading from './Loading';
 import { FaArrowRight } from "react-icons/fa";
 
-
 const LeftSide = ({ category }) => {
-
-   
     if (!category) {
-        return <p className="text-white"><Loading></Loading></p>;
+        return <Loading />;
     }
-     const {name,description}=category || {};
+
+    const { name, description } = category;
 
     const shortDetails =
-        description.length > 180 ? description.slice(0, 100) + "..." : description;
+        description.length > 180
+            ? description.slice(0, 100) + "..."
+            : description;
 
     return (
         <div className="text-white">
@@ -26,7 +26,6 @@ const LeftSide = ({ category }) => {
 
             <button className="btn btn-warning mt-6 text-black">
                 Booking <FaArrowRight />
-
             </button>
         </div>
     );
