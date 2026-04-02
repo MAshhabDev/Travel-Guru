@@ -1,22 +1,19 @@
 import React from 'react';
 
-const TourDetailsCard = ({tour}) => {
-
-    const {name,description}=tour
+const TourDetailsCard = ({ tour }) => {
+    const { name, description } = tour;
 
     return (
-        <div className='w-10/12'>
+        <div className="w-full max-w-2xl mx-auto px-4">
             <div className="text-white">
-            <h1 className="text-5xl md:text-6xl font-bold uppercase">
-                {name}
-            </h1>
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold uppercase leading-tight">
+                    {name}
+                </h1>
 
-            <p className="mt-5 text-white/80 max-w-md">
-                {description}
-            </p>
-
-            
-        </div>
+                <p className="mt-5 text-white/80 max-w-md md:max-w-xl text-sm sm:text-base">
+                    {description}
+                </p>
+            </div>
         </div>
     );
 };

@@ -11,21 +11,24 @@ const LeftSide = ({ category }) => {
     const { name, description, id } = category;
 
     const shortDetails =
-        description.length > 180
+        description.length > 100
             ? description.slice(0, 100) + "..."
             : description;
 
     return (
         <div className="text-white">
-            <h1 className="text-5xl md:text-6xl font-bold uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold uppercase leading-tight">
                 {name}
             </h1>
 
-            <p className="mt-5 text-white/80 max-w-md">
+            <p className="mt-5 text-white/80 max-w-md text-sm sm:text-base">
                 {shortDetails}
             </p>
 
-            <Link to={`/tour-details/${id}`} className="btn btn-warning mt-6 text-black">
+            <Link
+                to={`/tour-details/${id}`}
+                className="btn btn-warning mt-6 text-black inline-flex items-center gap-2"
+            >
                 Booking <FaArrowRight />
             </Link>
         </div>

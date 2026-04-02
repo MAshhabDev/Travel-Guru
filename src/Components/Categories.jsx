@@ -6,7 +6,7 @@ const Category = ({ category, selectedId, setSelectedId }) => {
   return (
     <div
       onClick={() => setSelectedId(id)}
-      className={`relative w-64 h-96 rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 ${
+      className={`relative w-full max-w-[260px] sm:max-w-[280px] md:max-w-[320px] h-[320px] sm:h-[380px] md:h-[420px] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 ${
         selectedId === id
           ? 'border-4 border-yellow-400 scale-105'
           : 'opacity-90'
@@ -20,7 +20,7 @@ const Category = ({ category, selectedId, setSelectedId }) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
 
-      <h2 className="absolute bottom-6 left-4 text-white text-2xl font-bold uppercase">
+      <h2 className="absolute bottom-6 left-4 text-white text-xl sm:text-2xl font-bold uppercase">
         {name}
       </h2>
     </div>

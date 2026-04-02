@@ -2,16 +2,19 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import { Outlet } from 'react-router';
 
-
 const AuthLayout = () => {
     return (
-        <div className='bg-base-100 min-h-screen'>
-            <header className='w-11/12 p-4 mx-auto'>
-            <Navbar textColor="text-black"></Navbar>
-
+        <div className="bg-base-100 min-h-screen flex flex-col">
+            {/* Header */}
+            <header className="w-11/12 max-w-7xl mx-auto px-4 py-3">
+                <Navbar textColor="text-black" />
             </header>
-            <main>
-                <Outlet></Outlet>
+
+            {/* Main */}
+            <main className="flex-1 flex items-center justify-center px-4">
+                <div className="w-full max-w-md">
+                    <Outlet />
+                </div>
             </main>
         </div>
     );

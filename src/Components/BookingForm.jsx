@@ -2,7 +2,7 @@ import React from "react";
 
 const BookingForm = () => {
     return (
-        <div className="bg-white w-full max-w-xs rounded-md p-4 shadow-xl">
+        <div className="bg-white w-full max-w-xs sm:max-w-sm md:max-w-md rounded-md p-4 shadow-xl">
             <form className="space-y-3">
                 <div>
                     <label className="block text-xs text-gray-500 mb-1">Origin</label>
@@ -22,25 +22,21 @@ const BookingForm = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                         <label className="block text-xs text-gray-500 mb-1">From</label>
-                        <div className="relative">
-                            <input
-                                type="date"
-                                className="w-full bg-gray-100 rounded px-3 py-3 text-sm font-semibold outline-none"
-                            />
-                        </div>
+                        <input
+                            type="date"
+                            className="w-full bg-gray-100 rounded px-3 py-3 text-sm font-semibold outline-none"
+                        />
                     </div>
 
                     <div>
                         <label className="block text-xs text-gray-500 mb-1">To</label>
-                        <div className="relative">
-                            <input
-                                type="date"
-                                className="w-full bg-gray-100 rounded px-3 py-3 text-sm font-semibold outline-none"
-                            />
-                        </div>
+                        <input
+                            type="date"
+                            className="w-full bg-gray-100 rounded px-3 py-3 text-sm font-semibold outline-none"
+                        />
                     </div>
                 </div>
 

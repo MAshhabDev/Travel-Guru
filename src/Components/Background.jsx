@@ -7,7 +7,10 @@ const Background = ({ children }) => {
     return (
         <div
             className="min-h-screen  max-h-full bg-cover bg-center md:bg-fixed"
-            style={{ backgroundImage: `url(${image})` }}
+            style={{
+                backgroundImage: `url(${image})`, backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
         >
             <div className="fixed inset-0 bg-black/70"></div>
 

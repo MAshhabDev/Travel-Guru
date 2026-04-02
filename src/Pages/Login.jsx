@@ -9,7 +9,7 @@ const Login = () => {
 
     const navigate = useNavigate()
 
-    const { setUser, logIn } = use(AuthContext)
+    const { logIn } = use(AuthContext)
 
     const handleLogin = (e) => {
         e.preventDefault();

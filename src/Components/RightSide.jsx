@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Category from './Category';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const RightSide = ({ categories, selectedId, setSelectedId }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3;
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
+    };
+
+    updateVisibleCards();
+    window.addEventListener('resize', updateVisibleCards);
+
+    return () => window.removeEventListener('resize', updateVisibleCards);
+  }, []);
 
   const handleNext = () => {
     if (currentIndex + visibleCards < categories.length) {
@@ -25,7 +42,7 @@ const RightSide = ({ categories, selectedId, setSelectedId }) => {
 
   return (
     <div>
-      <div className="flex gap-6 overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visibleItems.map((category) => (
           <Category
             key={category.id}
