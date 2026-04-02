@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
 import logo from "../assets/logo.png";
 import { CiSearch } from "react-icons/ci";
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = ({ textColor = "text-black" }) => {
+
+    const { user, logOut } = use(AuthContext);
+    const handleLogout = () => {
+        logOut().then(() => {
+            alert("Log Out Successfully")
+        }).catch((error) => {
+            alert(error)
+        })
+    }
     return (
         <div className={`flex items-center justify-between ${textColor} px-4 md:px-0`}>
 
@@ -22,7 +32,7 @@ const Navbar = ({ textColor = "text-black" }) => {
                     type="text"
                     placeholder="Search Your Destination"
                     className={`bg-transparent outline-none ${textColor} ${textColor === "text-white" ? "placeholder-white/70" : "placeholder-black/50"} w-full`}
-                
+
                 />
             </div>
 
@@ -32,10 +42,22 @@ const Navbar = ({ textColor = "text-black" }) => {
                 <NavLink to="/destination">Destination</NavLink>
                 <NavLink to="/blog">Blog</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
+                {/* User Name */}
+                {
+                    user && (
+                        <span className="bg-black px-3 text-white py-1 rounded-full text-2xl">
+                            {user.displayName || user.name}
+                        </span>
+                    )
+                }
 
-                <NavLink to="/auth/login" className="btn btn-warning text-black px-4 py-1 md:px-6">
-                    Login
-                </NavLink>
+                {
+                    user ? <button onClick={handleLogout} className='btn btn-primary'>Log Out</button> : <NavLink to="/auth/login" className="btn btn-warning text-black px-4 py-1 md:px-6">
+                        Login
+                    </NavLink>
+                }
+
+
             </div>
         </div>
     );

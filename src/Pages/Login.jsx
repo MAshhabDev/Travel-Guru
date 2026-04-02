@@ -1,26 +1,48 @@
-import React from 'react';
+import React, { use } from 'react';
 
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
+
+    const location = useLocation();
+
+    const navigate = useNavigate()
+
+    const { setUser, logIn } = use(AuthContext)
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const pass = e.target.pass.value;
+
+        logIn(email, pass).then((result) => {
+            const user = result.user;
+
+            navigate(`${location.state ? location.state : "/"}`)
+
+        }).catch((error) => {
+            alert(error.message)
+        })
+    }
 
 
     return (
         <div className='flex flex-col mx-auto min-h-screen justify-center items-center'>
             <div className=" ml-5 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
-                <div className="card-body scroll-px-0.5">
+                <form onSubmit={handleLogin} className="card-body scroll-px-0.5">
                     <h2 className='font-semibold text-2xl'>LogIn</h2>
 
                     <fieldset className="fieldset">
                         <label className="label">Email</label>
-                        <input type="email" className="input" placeholder="Email" />
+                        <input type="email" name='email' className="input" placeholder="Email" />
                         <label className="label">Password</label>
-                        <input type="password" className="input" placeholder="Password" />
+                        <input type="password" name='pass' className="input" placeholder="Password" />
                         <div><a className="link link-hover">Forgot password?</a></div>
-                        <Link to className="btn btn-primary mt-4 mb-2">Login</Link>
+                        <button type='submit' className="btn btn-primary mt-4 mb-2">Login</button>
                         <p className='mx-auto'>Don't have an account? <Link to="/auth/register" className='text-primary' >Create an account</Link> </p>
                     </fieldset>
-                </div>
+                </form>
             </div>
 
             <div className="flex mx-auto w-3/15 flex-col">

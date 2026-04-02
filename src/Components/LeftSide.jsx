@@ -1,13 +1,14 @@
 import React from 'react';
 import Loading from './Loading';
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router';
 
 const LeftSide = ({ category }) => {
     if (!category) {
         return <Loading />;
     }
 
-    const { name, description } = category;
+    const { name, description, id } = category;
 
     const shortDetails =
         description.length > 180
@@ -24,9 +25,9 @@ const LeftSide = ({ category }) => {
                 {shortDetails}
             </p>
 
-            <button className="btn btn-warning mt-6 text-black">
+            <Link to={`/tour-details/${id}`} className="btn btn-warning mt-6 text-black">
                 Booking <FaArrowRight />
-            </button>
+            </Link>
         </div>
     );
 };
