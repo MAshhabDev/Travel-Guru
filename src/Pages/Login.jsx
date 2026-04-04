@@ -68,7 +68,7 @@ const Login = () => {
                     </svg>
                     Continue With Google
                 </button>
-            </div>
+            </div>  
 
         </div>
     );
