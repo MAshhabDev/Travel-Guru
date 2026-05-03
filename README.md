@@ -1,16 +1,73 @@
-# React + Vite
+# ✈️ Travel Guru – React Travel Booking Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **GitHub Repo:** https://github.com/MAshhabDev/Travel-Guru
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
 
-## React Compiler
+Travel Guru is a responsive travel booking web application built using React.js.
+Users can explore different travel destinations and view booking-related information through a clean and interactive interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🌍 Browse popular travel destinations (Cox’s Bazar, Sreemangal, Sundarbans)
+* 🎯 Interactive UI with dynamic content
+* 🔐 User authentication system (Login functionality)
+* 📱 Fully responsive design
+* ⚡ Smooth navigation and modern UI design
+
+---
+
+## 🛠️ Technologies Used
+
+* **Frontend:** React.js, JavaScript, HTML, CSS
+* **Authentication:** Firebase (if used)
+* **Tools:** Git, GitHub
+
+---
+
+## ⚠️ Note
+
+This project is currently under development.
+Some features like full navigation functionality and advanced booking system are in progress.
+
+---
+
+## 📷 Screenshot
+
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/MAshhabDev/Travel-Guru
+cd Travel-Guru
+npm install
+npm start
+```
+
+---
+
+## 📚 What I Learned
+
+* React component-based architecture
+* Routing and UI structuring
+* Building responsive layouts
+* Managing project structure
+
+---
+
+## 👨‍💻 Author
+
+**Mahir Ashhab**
+🔗 GitHub: https://github.com/MAshhabDev
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
